@@ -80,7 +80,7 @@ public class DetailActivity extends ActionBarActivity {
         }
 
         @Override
-        public boolean onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
             // Inflate the menu; this adds items to the action bar if it is present.
             inflater.inflate(R.menu.detailfragment, menu);
 
@@ -97,8 +97,8 @@ public class DetailActivity extends ActionBarActivity {
                 mShareActionProvider.setShareIntent(createShareForecastIntent());
             }else{
                 Log.d(LOG_TAG, "Share action provider is null?");
+
             }
-            return true;
         }
 
         private Intent createShareForecastIntent(){
